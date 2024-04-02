@@ -1,0 +1,84 @@
+Jack really likes his number five: the trick here is that you have to multiply each number by 5 raised to the number of digits of each numbers, so, for example:
+
+  3 -->    15  (  3 * 5¹)
+ 10 -->   250  ( 10 * 5²)
+200 --> 25000  (200 * 5³)
+  0 -->     0  (  0 * 5¹)
+ -3 -->   -15  ( -3 * 5¹)
+
+
+solution:
+function multiply(number){
+  var arrai = String(number).replace(/-/gi, '')
+//   arrai = arrai.replace(/-/gi, '')
+  return number * 5 ** arrai.length
+}
+
+
+// -----------------------------------------------------------------
+
+Trolls are attacking your comment section!
+
+A common way to deal with this situation is to remove all of the vowels from the trolls' comments, neutralizing the threat.
+
+Your task is to write a function that takes a string and return a new string with all vowels removed.
+
+For example, the string "This website is for losers LOL!" would become "Ths wbst s fr lsrs LL!".
+
+Note: for this kata y isn't considered a vowel.
+
+solution:
+
+function disemvowel(str) {
+  return str.replace(/[aeiou]/gi, '');
+}
+
+// -------------------------------------------------------------------
+Count the number of divisors of a positive integer n.
+
+Random tests go up to n = 500000.
+
+Examples (input --> output)
+4 --> 3 // we have 3 divisors - 1, 2 and 4
+5 --> 2 // we have 2 divisors - 1 and 5
+12 --> 6 // we have 6 divisors - 1, 2, 3, 4, 6 and 12
+30 --> 8 // we have 8 divisors - 1, 2, 3, 5, 6, 10, 15 and 30
+Note you should only return a number, the count of divisors. The numbers between parentheses are shown only for you to see which numbers are counted in each case.
+
+
+solution:
+
+function getDivisorsCnt(n){
+   var count = 1;
+   for (let i = 0; i<n ; i++){
+     if (n % i === 0) {
+       count++;
+     }
+   }
+   return count;
+}
+
+//------------------------------------------------------------------
+Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0. Your function only needs to return the result, what is shown between parentheses in the example below is how you reach that result and it's not part of it, see the sample tests.
+
+For example (Input -> Output):
+
+2 -> 3 (1 + 2)
+8 -> 36 (1 + 2 + 3 + 4 + 5 + 6 + 7 + 8)
+
+
+solution: 
+var summation = function (num) {
+  var result = 0
+  for (let i = 0; i<num+1; i++) {
+    result += i 
+    console.log(result)
+    }
+  return result
+}
+
+//----------------------------------------------------------------------
+
+
+
+
